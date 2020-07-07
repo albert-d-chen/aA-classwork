@@ -59,7 +59,7 @@ def population_in_millions
     FROM 
       countries
     WHERE
-      continent IN ('South America');
+      continent = 'South America';
   SQL
 end
 

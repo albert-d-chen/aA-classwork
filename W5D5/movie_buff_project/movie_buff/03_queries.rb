@@ -4,7 +4,9 @@ def what_was_that_one_with(those_actors)
   Movie
     .select(:title, :id)
     .joins(:actors)
-    .where(actors: {name: those_actors[0]})
+    .where(actors: {name: those_actors})
+    .group(:id)
+    .having('COUNT(*) = ?', those_actors.length)
     
     
 

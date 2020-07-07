@@ -18,29 +18,64 @@ require_relative './sqlzoo.rb'
 def null_dept
   # List the teachers who have NULL for their department.
   execute(<<-SQL)
+  select
+  teachers.name
+  from teachers
+  left join depts on depts.id = teachers.dept_id
+  where
+  depts.id IS NULL 
   SQL
 end
 
+  # SELECT
+  #   teachers.name
+  # FROM
+  #   teachers
+  # WHERE
+  #   dept_id IS NULL 
 def all_teachers_join
   # Use a type of JOIN that will list all teachers and their department,
   # even if the department in NULL/nil.
   execute(<<-SQL)
+  select
+  teachers.name, depts.name
+  from teachers
+  left join depts on depts.id = teachers.dept_id
   SQL
 end
 
+# SELECT
+#     teachers.name,
+#     depts.name
+#   FROM
+#     teachers
+#   LEFT OUTER JOIN 
+#     depts ON depts.id = dept_id 
 def all_depts_join
   # Use a different JOIN so that all departments are listed.
   # NB: you can avoid RIGHT OUTER JOIN (and just use LEFT) by swapping
   # the FROM and JOIN tables.
   execute(<<-SQL)
+   select
+  teachers.name, depts.name
+  from teachers
+  right join depts on depts.id = teachers.dept_id
   SQL
 end
 
+# SELECT 
+#     teachers.name,
+#     depts.name
+#   FROM 
+#     teachers
+#   RIGHT OUTER JOIN
+#     depts ON teachers.dept_id = depts.id
 def teachers_and_mobiles
   # Use COALESCE to print the mobile number. Use the number '07986
   # 444 2266' if no number is given. Show teacher name and mobile
   # #number or '07986 444 2266'
   execute(<<-SQL)
+
   SQL
 end
 
@@ -57,6 +92,11 @@ def num_teachers_and_mobiles
   # mobile phones.
   # NB: COUNT only counts non-NULL values.
   execute(<<-SQL)
+  SELECT
+    COUNT(teachers.name),
+    COUNT(teachers.mobile)
+  FROM
+    teachers
   SQL
 end
 
