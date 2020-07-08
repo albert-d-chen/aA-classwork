@@ -188,14 +188,7 @@ def alien_cast
   join
   movies on castings.movie_id = movies.id
   where
-  movies.id = (
-    select
-    movies.id
-    from
-    movies
-    where
-    title = 'Alien'
-  )
+  movies.title = 'Alien'
 
   SQL
 end
