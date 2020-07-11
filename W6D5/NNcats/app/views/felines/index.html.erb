@@ -1,0 +1,17 @@
+<h1>Cats Index Page</h1>
+
+<ul>
+    <% @felines.each do |feline| %>
+    
+    <li> 
+        <ul>
+            <li><%= feline.birth_date  %></li>
+            <li><%= feline.color  %></li>
+            <li><%= feline.name  %></li>
+            <li><%= feline.sex  %></li>
+            <li><%= feline.description  %></li>
+        </ul>
+    <li>
+    <% end %>
+</ul>
+

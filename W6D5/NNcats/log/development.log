@@ -1,0 +1,862 @@
+  [1m[35m (898.5ms)[0m  [1m[35mCREATE DATABASE "NNcats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (680.3ms)[0m  [1m[35mCREATE DATABASE "NNcats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (83.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (82.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1200271618940332155)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFelines (20200710204812)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (129.6ms)[0m  [1m[35mCREATE TABLE "felines" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200710204812_create_felines.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200710204812"]]
+  ↳ bin/rails:9
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-10 20:53:18.754416"], ["updated_at", "2020-07-10 20:53:18.754416"]]
+  ↳ bin/rails:9
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1200271618940332155)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mFeline Create (0.7ms)[0m  [1m[32mINSERT INTO "felines" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2015-01-20"], ["color", "orange"], ["name", "Garfield"], ["sex", "M"], ["description", "a fat cat"], ["created_at", "2020-07-10 21:20:35.501059"], ["updated_at", "2020-07-10 21:20:35.501059"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" ORDER BY "felines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" ORDER BY "felines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/felines" for ::1 at 2020-07-10 14:33:31 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/charsun/.rbenv/versions/2.5.8/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.4ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 717ms (Views: 709.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/felines/1" for ::1 at 2020-07-10 14:35:26 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/felines/1" for ::1 at 2020-07-10 14:40:25 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1" for ::1 at 2020-07-10 14:42:17 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 14:58:06 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (54.4ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 3.5ms)
+
+
+
+ActionView::Template::Error - nil can't be converted to a Time value:
+  app/views/felines/new.html.erb:5:in `view template'
+  app/controllers/felines_controller.rb:14:in `new'
+
+Started POST "/__better_errors/c8c3576a6813cfdb/variables" for ::1 at 2020-07-10 14:58:06 -0700
+Started GET "/felines/new" for ::1 at 2020-07-10 14:59:22 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 15:02:49 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 15:05:39 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 15:06:43 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 15:15:15 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/edit" for ::1 at 2020-07-10 15:15:25 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Feline with 'id'=edit:
+  app/controllers/felines_controller.rb:8:in `show'
+
+Started POST "/__better_errors/b7b0cd63383668f9/variables" for ::1 at 2020-07-10 15:15:26 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 15:15:30 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `name' for nil:NilClass:
+  app/views/felines/edit.html.erb:8:in `view template'
+
+Started POST "/__better_errors/3c9f85989873dd16/variables" for ::1 at 2020-07-10 15:15:30 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 15:15:52 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `name' for nil:NilClass:
+  app/views/felines/edit.html.erb:8:in `view template'
+
+Started POST "/__better_errors/59703f3d13b4bb89/variables" for ::1 at 2020-07-10 15:15:52 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 15:16:37 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (287.5ms)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `edit_felines_url' for #<#<Class:0x00007f463c3466e0>:0x00007f463cdbd768>
+Did you mean?  edit_feline_url:
+  app/views/felines/edit.html.erb:3:in `view template'
+
+Started POST "/__better_errors/2ed1949727a8dd56/variables" for ::1 at 2020-07-10 15:16:37 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 15:21:46 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `name' for nil:NilClass:
+  app/views/felines/edit.html.erb:8:in `view template'
+
+Started POST "/__better_errors/ef47e9696c4eff6f/variables" for ::1 at 2020-07-10 15:21:46 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 15:31:51 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"felines", :id=>nil}, missing required keys: [:id]:
+  app/views/felines/edit.html.erb:3:in `view template'
+
+Started POST "/__better_errors/18de4f62e900a197/variables" for ::1 at 2020-07-10 15:31:51 -0700
+Started GET "/felines/new" for ::1 at 2020-07-10 15:32:02 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:15 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:17 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:17 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:18 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:18 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:18 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 15:40:18 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-06-15", "description"=>"it looks like a dirty sock"}}
+No template found for FelinesController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 15:40:27 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.4ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:04:19 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.4ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:04:22 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 16:04:35 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"grey", "birth_date"=>"2020-07-05", "description"=>"it looks like a dirty sock"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[36mFeline Create (0.6ms)[0m  [1m[32mINSERT INTO "felines" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-07-05"], ["color", "grey"], ["name", "Socks"], ["sex", "M"], ["description", "it looks like a dirty sock"], ["created_at", "2020-07-10 23:04:35.615424"], ["updated_at", "2020-07-10 23:04:35.615424"]]
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/felines_controller.rb:34
+Redirected to http://localhost:3000/felines/2
+Completed 302 Found in 35ms (ActiveRecord: 32.0ms)
+
+
+Started GET "/felines/2" for ::1 at 2020-07-10 16:04:35 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:04:46 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:05:13 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/felines/2" for ::1 at 2020-07-10 16:05:30 -0700
+Processing by FelinesController#update as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "birth_date"=>"2020-06-01", "description"=>"it looks like a dirty sock"}, "id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/felines_controller.rb:24
+  [1m[36mFeline Update (0.2ms)[0m  [1m[33mUPDATE "felines" SET "birth_date" = $1, "updated_at" = $2 WHERE "felines"."id" = $3[0m  [["birth_date", "2020-06-01"], ["updated_at", "2020-07-10 23:05:30.603487"], ["id", 2]]
+  ↳ app/controllers/felines_controller.rb:24
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/felines_controller.rb:24
+Redirected to http://localhost:3000/felines/2
+Completed 302 Found in 13ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/felines/2" for ::1 at 2020-07-10 16:05:30 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:05:36 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.4ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:05:53 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 16:06:05 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Pepper", "birth_date"=>"", "description"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/felines_controller.rb:34
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::MissingTemplate - Missing template felines/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/charsun/AppAcademy/AaProjects/W6D5/NNcats/app/views"
+:
+  app/controllers/felines_controller.rb:37:in `create'
+
+Started POST "/__better_errors/d5a057f44450556d/variables" for ::1 at 2020-07-10 16:06:05 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:06:40 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:09:04 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (275.8ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `feline' for #<#<Class:0x00007f4651c3c488>:0x00007f4644089530>
+Did you mean?  @feline:
+  app/views/felines/edit.html.erb:24:in `view template'
+  app/controllers/felines_controller.rb:19:in `edit'
+
+Started POST "/__better_errors/0b34bb5d39afe3d7/variables" for ::1 at 2020-07-10 16:09:05 -0700
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:09:19 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:14:12 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:16:53 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:16:54 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:16:55 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.1ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/felines/" for ::1 at 2020-07-10 16:16:58 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:17:03 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/1/edit" for ::1 at 2020-07-10 16:17:26 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:17:30 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:19:43 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:23:22 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:23:38 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/2" for ::1 at 2020-07-10 16:26:19 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 5.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:40:13 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.5ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:40:17 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL
+...pend=( render = 'form', feline: @feline, type: :new);@output...
+...                        ^~~~~~~:
+  app/views/felines/new.html.erb:3:in `'
+  app/controllers/felines_controller.rb:14:in `new'
+
+Started POST "/__better_errors/c45b72c6ed8e4e41/variables" for ::1 at 2020-07-10 16:40:18 -0700
+Started GET "/felines/new" for ::1 at 2020-07-10 16:41:05 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL
+...pend=( render = 'form', feline: @feline, type: :new);@output...
+...                        ^~~~~~~:
+  app/views/felines/new.html.erb:3:in `'
+  app/controllers/felines_controller.rb:14:in `new'
+
+Started POST "/__better_errors/0c9090c748084b35/variables" for ::1 at 2020-07-10 16:41:06 -0700
+Started GET "/felines/new" for ::1 at 2020-07-10 16:41:42 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.5ms)
+  Rendered felines/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 16:42:32 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Pepper", "sex"=>"F", "color"=>"Black", "birth_date"=>"2020-06-28", "description"=>"Pepper is spicy"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[36mFeline Create (0.4ms)[0m  [1m[32mINSERT INTO "felines" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-06-28"], ["color", "Black"], ["name", "Pepper"], ["sex", "F"], ["description", "Pepper is spicy"], ["created_at", "2020-07-10 23:42:32.409753"], ["updated_at", "2020-07-10 23:42:32.409753"]]
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/felines_controller.rb:34
+Redirected to http://localhost:3000/felines/3
+Completed 302 Found in 29ms (ActiveRecord: 24.2ms)
+
+
+Started GET "/felines/3" for ::1 at 2020-07-10 16:42:32 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:43:16 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:43:37 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.8ms)
+  Rendered felines/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:43:53 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.5ms)
+  Rendered felines/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/3/edit" for ::1 at 2020-07-10 16:44:01 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.8ms)
+  Rendered felines/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/3/edit" for ::1 at 2020-07-10 16:44:46 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFeline Load (0.4ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/_form.html.erb (2.1ms)
+  Rendered felines/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:18 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.3ms)
+  Rendered felines/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:22 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.4ms)
+  Rendered felines/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:23 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:23 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.1ms)
+  Rendered felines/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:23 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.1ms)
+  Rendered felines/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:46:23 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.8ms)
+  Rendered felines/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:47:23 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.1ms)
+  Rendered felines/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:47:24 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (1.6ms)
+  Rendered felines/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:47:24 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:47:25 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:49:01 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.6ms)
+  Rendered felines/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:49:08 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.9ms)
+  Rendered felines/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:49:12 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.6ms)
+  Rendered felines/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/2/edit" for ::1 at 2020-07-10 16:58:41 -0700
+Processing by FelinesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:18
+  Rendering felines/edit.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.9ms)
+  Rendered felines/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:58:44 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.9ms)
+  Rendered felines/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:59:15 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.3ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 16:59:31 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/felines" for ::1 at 2020-07-10 16:59:51 -0700
+Processing by FelinesController#create as HTML
+  Parameters: {"feline"=>{"name"=>"Socks", "sex"=>"M", "color"=>"Grey", "birth_date"=>"2020-06-01", "description"=>"it looks like a dirty sock"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[36mFeline Create (0.7ms)[0m  [1m[32mINSERT INTO "felines" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-06-01"], ["color", "Grey"], ["name", "Socks"], ["sex", "M"], ["description", "it looks like a dirty sock"], ["created_at", "2020-07-10 23:59:51.087954"], ["updated_at", "2020-07-10 23:59:51.087954"]]
+  ↳ app/controllers/felines_controller.rb:34
+  [1m[35m (319.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/felines_controller.rb:34
+Redirected to http://localhost:3000/felines/4
+Completed 302 Found in 323ms (ActiveRecord: 319.9ms)
+
+
+Started GET "/felines/4" for ::1 at 2020-07-10 16:59:51 -0700
+Processing by FelinesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT  "felines".* FROM "felines" WHERE "felines"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/felines_controller.rb:8
+  Rendering felines/show.html.erb within layouts/application
+  Rendered felines/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines" for ::1 at 2020-07-10 16:59:56 -0700
+Processing by FelinesController#index as HTML
+  Rendering felines/index.html.erb within layouts/application
+  [1m[36mFeline Load (0.2ms)[0m  [1m[34mSELECT "felines".* FROM "felines"[0m
+  ↳ app/views/felines/index.html.erb:4
+  Rendered felines/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/felines/new" for ::1 at 2020-07-10 17:00:44 -0700
+Processing by FelinesController#new as HTML
+  Rendering felines/new.html.erb within layouts/application
+  Rendered felines/_form.html.erb (0.7ms)
+  Rendered felines/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+

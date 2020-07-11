@@ -1,0 +1,49 @@
+<h1>Update Your Cat Info</h1>
+
+<%= render 'form', feline: @feline, type: :edit%>
+<!--
+<form action = '<%= feline_url(@feline) %>' method = 'POST'>
+
+    <input type='hidden' name='_method' value='PATCH'>
+
+    <label> Name:
+        <input type='text' name='feline[name]' value='<%= @feline.name %>'>
+    </label>
+
+    <br>
+
+    <label> Sex:
+        <label for='Male'>Male</label>
+        <input <%= @feline.sex == 'M' ? 'checked' : ''%> type='radio' id ='Male' name='feline[sex]' value='<%= 'M' %>'>
+        <label for='Female'>Female</label>
+        <input <%= @feline.sex == 'F' ? 'checked' : ''%> type='radio' id ='Female' name='feline[sex]' value='<%= 'F' %>'>
+    </label>
+
+    <br>
+
+    <label> Color:
+        <select name='feline[color]'>
+            <% Feline::CAT_COLORS.each do |color| %>
+                <option name='feline[color]' value=<%= color %> <%= @feline.color == color ? 'selected' : '' %>> <%= color %></option>
+            <% end %>
+        </select>
+    </label>
+
+    <br>
+
+    <label> Birth Date:
+        <input type='date' name='feline[birth_date]' value='<%= @feline.birth_date %>'>
+    </label>
+
+    <br>
+
+    <label> Description:
+        <input type='textarea' name='feline[description]' value='<%= @feline.description %>'>
+    </label>
+
+    <label> Submit
+        <input type='submit' value="Update your cat info">
+    </label>
+</form>
+
+!-->
