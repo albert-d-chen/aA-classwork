@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>Welcome to our Cats Application, meow.</h1>
+      <% if !logged_in? %>
+        <a href="<%= new_session_url %>">Login Time!</a>
+      <% else %>
+        <h2>Welcome!</h2>
+          <form action=" <% session_url %>" method="POST">
+        <h3>Thanks for logging in!</h3>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Logout :(">
+        </form>
+      <% end %>
+    <%= yield %>
+  </body>
+</html>
