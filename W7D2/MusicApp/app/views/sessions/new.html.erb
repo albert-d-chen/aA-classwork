@@ -1,0 +1,21 @@
+<h1>Dotify</h1>
+
+<h4>Not a member?
+<a class='button' href=<%=new_user_url%>>Sign up!</a>
+</h4>
+
+<form action="<%= session_url%>" method = "Post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    
+    <label>Email:
+        <input type="text" name="user[email]">
+    </label>
+
+    <label>Password:
+        <input type="password" name="user[password]">
+    </label>
+
+    <input type="submit" value="Enter!">
+
+
+</form>
