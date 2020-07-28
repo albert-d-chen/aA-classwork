@@ -1,0 +1,13 @@
+/* PHASE 8: Thumbs */
+.thumb{
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.thumb:after {
+    
+}
