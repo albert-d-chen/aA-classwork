@@ -1,0 +1,17 @@
+{
+  "name": "W9D2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack src/index.js -o dist/main.js -w --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
