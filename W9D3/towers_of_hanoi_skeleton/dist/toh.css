@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.hanoi {
+    display: flex;
+    border: 5px solid black;
+    /* height: 500px; */
+    width: 500px;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    margin: 0 0 0 100px;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    border-bottom: 10px solid black;
+    /* border: 5px solid black; */
+    width: 75px;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 30px;
+}
+
+li {
+    background: grey;
+    border-radius: 30px;
+    border: 5px solid grey;
+    display: flex;
+    margin: 2px;
+    /* justify-content: center; */
+    
+}

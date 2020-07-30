@@ -1,0 +1,77 @@
+h1 {
+    text-align: center;
+    font-size: 70px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    list-style: none;
+    margin: 30px auto;
+    border: 5px solid black;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    border: 1px solid black;
+    width: 98px;
+    height: 98px;
+    background: gray;
+}
+
+li:hover {
+    background: yellow;
+    cursor: pointer;
+}
+
+.x {
+    background: white;
+    text-align: center;
+    font-size: 70px;
+}
+
+.o {
+    background: white;
+    text-align: center;
+    font-size: 70px;
+}
+
+.x:hover {
+    background: white;
+}
+
+.o:hover {
+    background: white;
+}
+.x:after {
+    content: 'x';
+}
+
+.o:after {
+    content: 'o';
+}
+
+
+.gg {
+    color: red;
+    background: white;
+}
+.winnerX .x{
+    background: green;
+    color: white;
+}
+
+.winnerO .o{
+    background: green;
+    color: white;
+}
+
+p {
+    text-align: center;
+    font-size: 70px;
+}
