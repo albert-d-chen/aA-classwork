@@ -80,20 +80,20 @@ function curriedSum(numArgs) {
 
 
 // curry1
-    Function.prototype.curry1 = function(numArgs) {
-        let that = this;
-        let args = [];
+    // Function.prototype.curry1 = function(numArgs) {
+    //     let that = this;
+    //     let args = [];
 
-        function _curry(arg) {
-            args.push(arg);
-            if (args.length === numArgs) {
-                return that(...args);
-            } else {
-                return _curry;
-            }
-        }
-        return _curry;
-    }
+    //     function _curry(arg) {
+    //         args.push(arg);
+    //         if (args.length === numArgs) {
+    //             return that(...args);
+    //         } else {
+    //             return _curry;
+    //         }
+    //     }
+    //     return _curry;
+    // }
 
     
     function addNums(...args) {
@@ -112,7 +112,7 @@ function curriedSum(numArgs) {
         function _curry(arg) {
             args.push(arg);
             if (args.length === numArgs) {
-                return that.apply(this, args);
+                return that.call(this, args);
             } else {
                 return _curry;
             }
@@ -121,7 +121,7 @@ function curriedSum(numArgs) {
     }
 
     let test = addNums.curry2(4);
-    console.log(test = test('hi'));
+    console.log(test = test(['hi', 'uh']));
     console.log(test = test('hello'));
     console.log(test = test("yo"));
     console.log(test = test('bye'));
