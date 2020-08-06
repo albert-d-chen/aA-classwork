@@ -1,0 +1,74 @@
+h1 {
+    text-align: center;
+}
+
+#root {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    margin: 0px auto;
+    cursor:pointer;
+}
+
+.row {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300;
+    height: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    /* border: 1px solid darkgray; */
+    background-color: lightgrey;
+    border-style: outset;
+    border-width: 1px;
+    font-weight: bold;
+
+    position: relative;
+    align-items: center;
+    /* vertical-align: middle; */
+}
+
+.explored {
+    border-style: inset;
+}
+
+.idk {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.won, .lose{
+    position:absolute;
+    top: 150px;
+    left: 50%;
+    width: 150px;
+    margin-left: -95px;
+    z-index: 3;
+    border: 1px solid black;
+    padding: 20px;
+    background: cornflowerblue;
+    border-radius: 20px;
+    color: white;
+}
+
+button {
+    margin: 10px;
+    border-radius: 15px;
+    background: lightgreen;
+    box-shadow:10px 10px lightgreen;
+}
