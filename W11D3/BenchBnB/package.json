@@ -1,0 +1,6 @@
+{
+  "name": "benchBnB",
+  "private": true,
+  "dependencies": {}
+}
+""start:, ""webpack --watch --developjmentmentmode=
