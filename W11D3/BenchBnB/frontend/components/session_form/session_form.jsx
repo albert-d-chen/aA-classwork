@@ -23,10 +23,11 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Welcome</h1>
-                <form onSubmit={this.handleSubmit}>
-                    {this.props.formType === 'signup' ? 'Sign Up!': 'Login!'} or {this.props.navLink}
+            <div className='modal is-open'>
+                <form onSubmit={this.handleSubmit} className='modal-form'>
+                    <div>
+                        {/* {this.props.formType === 'signup' ? 'Sign Up!' : 'Have an Account?'} or*/} {this.props.navLink} 
+                    </div>
                     <ul>
                         {this.props.errors.map((error, idx) => (
                             <li key={idx}>
@@ -39,13 +40,14 @@ class SessionForm extends React.Component {
                     <br/>
 
                     <div>
-                       <label>Username:
+                       <label className='user'>Username:
                            <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                            />
                        </label>
-                        <label>Password:
+                       <br/>
+                        <label className='password'>Password:
                            <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
@@ -53,12 +55,15 @@ class SessionForm extends React.Component {
                         </label>
 
                         <br/>
-
-                        <button type='submit'>
-                            {this.props.formType === 'signup' ? 'Sign Up!' : 'Log In!'} 
-                        </button>
+                        <br/>
+                        <div className='button1'>
+                            <button type='submit' className='button2' >
+                                {this.props.formType === 'signup' ? 'Sign Up!' : 'Log In!'}
+                            </button>
+                        </div>
                     </div>                 
                 </form>
+                <div className='modal-screen'></div>
             </div>
         )
     }

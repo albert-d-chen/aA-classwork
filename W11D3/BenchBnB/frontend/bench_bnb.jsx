@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {signup, login, logout} from './actions/session_actions.js'
 import configureStore from './store/store';
-import Root from './components/root'
+import Root from './components/root';
+import {fetchBenches} from './actions/bench_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchBenches = fetchBenches;
  
   ReactDOM.render(<Root store={store}/>, root);
 })
